@@ -1,9 +1,9 @@
-package com.example.myapplication;
+package com.example.myapplication.Utils;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-public class Utils {
+public class FileUtils {
     /**
      * 文件流复制到文件
      */

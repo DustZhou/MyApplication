@@ -1,15 +1,14 @@
 package com.example.myapplication.Service;
 
 import android.os.Bundle;
-import android.os.Handler;
-import com.alibaba.fastjson.JSON;
+
+import com.example.myapplication.Utils.GsonUtils;
+
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import javax.net.ssl.HostnameVerifier;
@@ -72,8 +71,7 @@ public class Webservice {
 	 *   Bundle params = new Bundle();
      *   params.putString("WoolinteValue", paramJson);
      */
-    public static List callWebService(Handler handler,int handlerCode, String URL, String methodName, Bundle params, int ms) {
-        List list = null;
+    public static String callWebService( String URL, String methodName, Bundle params, int ms) {
         String nameSpace = "http://tempuri.org/";
         // 实例化SoapObject对象
         SoapObject request = new SoapObject(nameSpace, methodName);
@@ -92,6 +90,7 @@ public class Webservice {
         envelope.dotNet = true;
         envelope.setOutputSoapObject(request);
         HttpTransportSE ht;
+        String sjson = null;
         try {
             trustAllHttpsCertificates();
             HttpsURLConnection.setDefaultHostnameVerifier(hv);//执行方法的最前面一定要加上这两个方法的调用
@@ -105,30 +104,17 @@ public class Webservice {
             ht.call(nameSpace + methodName, envelope);
 
             if (envelope.getResponse() != null) {
-                String sjson = envelope.getResponse().toString();     
-				// Gson().fromJson(jsonObject.toString(), clazz)   --  Class<R> clazz
-                if ("[".equals(sjson.substring(0, 1))) {
-                    list = JSON.parseArray(sjson, HashMap.class);
-                } else if ("{".equals(sjson.substring(0, 1))) {
-                    sjson = "[" + sjson + "]";
-                    list = JSON.parseArray(sjson, HashMap.class);
-                } else if (sjson.toUpperCase().trim().equals("ERROR")
-                        || sjson.toUpperCase().trim().equals("\"ERROR\"")) {
-                    list = null;
-                } else if (sjson.trim().equals("anyType{}")) {
-                    list = null;
-                } else {
-                    list = new ArrayList();
-                    list.add(sjson);
-                }
-            } 
+                sjson = envelope.getResponse().toString();
+            }
+            assert sjson != null;
+            if (sjson.startsWith("[")) {
+                sjson = "{ResData:" + sjson + "}";
+            }
+            sjson = sjson.replace(":null,", ":\"\",");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (list == null && handler != null) {
-            handler.sendEmptyMessage(handlerCode);
-        }
-        return list;
+        return sjson;
     }
 
 

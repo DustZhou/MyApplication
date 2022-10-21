@@ -1,6 +1,8 @@
 package com.example.myapplication.Dao;
 
 import com.example.myapplication.Entity.PType;
+import com.example.myapplication.Entity.Root;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,4 +45,11 @@ public class DaoPType {
 
         return mPTypeList;
     }
+//    public static List<Root> GetRoot(String str){
+//        List<Root> mRoot = new ArrayList<>();
+//
+//
+//
+//    }
+
 }

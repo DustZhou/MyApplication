@@ -19,7 +19,7 @@ import com.example.myapplication.APP;
 import com.example.myapplication.Adapter.MyAdapter;
 import com.example.myapplication.Entity.PType;
 import com.example.myapplication.R;
-import com.example.myapplication.Utils;
+import com.example.myapplication.Utils.FileUtils;
 
 import db.AppDataDBHelper;
 
@@ -45,11 +45,11 @@ public class GetStockActivity extends AppCompatActivity {
         File  appdatadb =new File(getCacheDir().getAbsolutePath()+"db");
         if (!appdatadb.exists()) { // 判断是否存在，不存在则从安装目录中复制
             InputStream inStream = APP.getInstance().getResources().openRawResource(R.raw.tmp);
-            Utils.copyStreamtoFile(inStream, appdatadb.toString());
+            FileUtils.copyStreamtoFile(inStream, appdatadb.toString());
         }
         //APPDATA设置DB路径
         AppDataDBHelper.InitDBNAME(appdatadb.getAbsolutePath());
-        mPTypeList = GetList("00000");
+        mPTypeList.addAll(GetList("00000"));
         myAdapter = new MyAdapter(context,mPTypeList);
         mRecyclerView.setAdapter(myAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(GetStockActivity.this);

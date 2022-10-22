@@ -13,26 +13,19 @@ import android.widget.Button;
 import com.example.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnPost;
     private Button butWebPost;
 
-//    List<PType> mPTypeList = new ArrayList<PType>();
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnPost = (Button) findViewById(R.id.btn_post);
-        butWebPost = (Button)findViewById(R.id.btn_webpost);
-
-        btnPost.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, GetStockActivity.class);
-                startActivity(intent);
-            }
-        });
+        butWebPost = (Button) findViewById(R.id.btn_webpost);
+        /**
+         * 网络在线库存显示
+         * GoodsActivity
+         */
         butWebPost.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {

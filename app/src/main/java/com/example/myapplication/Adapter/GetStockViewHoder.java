@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 
-public class MyViewHoder extends RecyclerView.ViewHolder {
+public class GetStockViewHoder extends RecyclerView.ViewHolder {
     TextView mTitleTv;
     TextView mTitleTv2;
     ConstraintLayout mRootView;
 
-    public MyViewHoder(@NonNull View itemView) {
+    public GetStockViewHoder(@NonNull View itemView) {
         super(itemView);
         mTitleTv = itemView.findViewById(R.id.tv_Title);
         mTitleTv2 = itemView.findViewById(R.id.tv_Title2);

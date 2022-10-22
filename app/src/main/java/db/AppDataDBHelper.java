@@ -7,9 +7,6 @@ import com.tencent.wcdb.Cursor;
 import com.tencent.wcdb.database.SQLiteDatabase;
 import com.tencent.wcdb.database.SQLiteException;
 import com.tencent.wcdb.database.SQLiteOpenHelper;
-//import com.untility.MyApplication;
-//import com.untility.MyHashMap;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;

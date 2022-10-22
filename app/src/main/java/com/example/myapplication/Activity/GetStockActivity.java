@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.myapplication.APP;
-import com.example.myapplication.Adapter.MyAdapter;
+import com.example.myapplication.Adapter.GetStockAdapter;
 import com.example.myapplication.Entity.PType;
 import com.example.myapplication.R;
 import com.example.myapplication.Utils.FileUtils;
@@ -32,7 +32,7 @@ public class GetStockActivity extends AppCompatActivity {
     private Button butUponelevel;
     private Context context;
     RecyclerView mRecyclerView;
-    MyAdapter myAdapter;
+    GetStockAdapter myAdapter;
     List<PType> mPTypeList = new ArrayList<>();
 
     @Override
@@ -42,6 +42,9 @@ public class GetStockActivity extends AppCompatActivity {
         setContentView(R.layout.activity_getstock);
         mRecyclerView = findViewById(R.id.recyclerView);
         butUponelevel = findViewById(R.id.btn_Uponelevel);
+        /*
+        文件处理 copyStreamtoFile
+         */
         File  appdatadb =new File(getCacheDir().getAbsolutePath()+"db");
         if (!appdatadb.exists()) { // 判断是否存在，不存在则从安装目录中复制
             InputStream inStream = APP.getInstance().getResources().openRawResource(R.raw.tmp);
@@ -50,7 +53,7 @@ public class GetStockActivity extends AppCompatActivity {
         //APPDATA设置DB路径
         AppDataDBHelper.InitDBNAME(appdatadb.getAbsolutePath());
         mPTypeList.addAll(GetList("00000"));
-        myAdapter = new MyAdapter(context,mPTypeList);
+        myAdapter = new GetStockAdapter(context,mPTypeList);
         mRecyclerView.setAdapter(myAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(GetStockActivity.this);
         mRecyclerView.setLayoutManager(layoutManager);

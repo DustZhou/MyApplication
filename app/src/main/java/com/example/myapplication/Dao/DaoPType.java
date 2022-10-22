@@ -1,7 +1,6 @@
 package com.example.myapplication.Dao;
 
 import com.example.myapplication.Entity.PType;
-import com.example.myapplication.Entity.Root;
 
 import java.util.ArrayList;
 import java.util.HashMap;

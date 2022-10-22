@@ -3,7 +3,9 @@ package com.example.myapplication.Adapter;
 import static com.example.myapplication.Dao.DaoPType.GetList;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,29 +14,33 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Activity.GetStockActivity;
+import com.example.myapplication.Activity.GoodsActivity;
+import com.example.myapplication.Activity.QueryActivity;
 import com.example.myapplication.Entity.PType;
 import com.example.myapplication.R;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyViewHoder> {
+public class GetStockAdapter extends RecyclerView.Adapter<GetStockViewHoder> {
     private Context context;
     private List<PType> mPTypeList;
-    public MyAdapter(Context context, List<PType> mPTypeList) {
+
+    public GetStockAdapter(Context context, List<PType> mPTypeList) {
         this.context = context;
         this.mPTypeList = mPTypeList;
     }
 
     @NonNull
     @Override
-    public MyViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_list,parent,false);
-        MyViewHoder myViewHoder = new MyViewHoder(view);
+    public GetStockViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_list, parent, false);
+        GetStockViewHoder myViewHoder = new GetStockViewHoder(view);
         return myViewHoder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHoder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull GetStockViewHoder holder, @SuppressLint("RecyclerView") final int position) {
         PType type = mPTypeList.get(position);
         holder.mTitleTv.setText(type.getFullName());
         holder.mTitleTv2.setText(type.getTypeID());
@@ -46,7 +52,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHoder> {
                     mPTypeList.addAll(GetList(type.getTypeID()));
                     notifyDataSetChanged();
                     Log.e("11", "mse" + type.getTypeID());
-                }else {
+                } else {
+                    Intent intent = new Intent();
+                    intent.putExtra("GoodsName", type.getFullName());
+                    intent.putExtra("GoodsPTyeID", type.getTypeID());
+                    ((Activity) context).setResult(Activity.RESULT_OK, intent);
+                    ((Activity) context).finish();
                 }
             }
         });

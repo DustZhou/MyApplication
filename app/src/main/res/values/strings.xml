@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="recommend">商品信息</string>
+    <string name="hot">商品价格</string>
+    <string name="favorite">单位条码</string>
+    <string name="more">more</string>
 </resources>

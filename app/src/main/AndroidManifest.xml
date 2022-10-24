@@ -30,6 +30,7 @@
         <activity android:name="com.example.myapplication.Activity.GetStockActivity" />
         <activity android:name="com.example.myapplication.Activity.GoodsActivity" />
         <activity android:name="com.example.myapplication.Activity.QueryActivity" />
+        <activity android:name="com.example.myapplication.Activity.AddGoodsActivity" />
     </application>
 
 </manifest>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/goods"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="商品名:"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/goods_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="商品" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/category"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goods"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="类    别:"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/name_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="全部商品" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vendor"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="供应商:"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/name_vendor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="供应商" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numbering"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vendor"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="编    号:"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/name_numbering"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="编号"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/specification"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numbering"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/specification1"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vendor"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="规  格:"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/name_specification1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:hint="规格"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/specification2"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vendor"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="型  号:"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/name_specification2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:hint="型号"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/barcode"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specification"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="条    码:"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/name_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="条码"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unit"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="单 位:"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/name_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:entries="@array/unitSpinner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="产地" />
+
+        <EditText
+            android:id="@+id/name_origin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="产地"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unit1"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="单 位:"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/name_unit1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:entries="@array/unitSpinner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="换算率2" />
+
+        <EditText
+            android:id="@+id/name_onversionrate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="换算率2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unit2"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="单 位:"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/name_unit2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:entries="@array/unitSpinner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="换算率3" />
+
+        <EditText
+            android:id="@+id/name_onversionrate1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="换算率3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unit3"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit2"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="备 注:"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/name_remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="备注"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

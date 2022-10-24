@@ -15,18 +15,15 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_post"-->
-<!--        android:layout_width="126dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:text="获取库存报告"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.056"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.003" />-->
+    <Button
+        android:id="@+id/btn_addgoods"
+        android:layout_width="126dp"
+        android:layout_height="48dp"
+        android:text="添加商品"
+        app:layout_constraintEnd_toEndOf="@+id/btn_webpost"
+        app:layout_constraintStart_toStartOf="@+id/btn_webpost"
+        app:layout_constraintTop_toBottomOf="@+id/btn_webpost"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_webpost"

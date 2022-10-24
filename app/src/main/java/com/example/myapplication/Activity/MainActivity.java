@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import com.example.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
     private Button butWebPost;
-
+    private Button butAddGoods;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         butWebPost = (Button) findViewById(R.id.btn_webpost);
+        butAddGoods = (Button) findViewById(R.id.btn_addgoods);
         /**
          * 网络在线库存显示
          * GoodsActivity
@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, GoodsActivity.class);
+                startActivity(intent);
+            }
+        });
+        butAddGoods.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddGoodsActivity.class);
                 startActivity(intent);
             }
         });

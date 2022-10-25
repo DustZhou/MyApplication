@@ -2,6 +2,7 @@ package com.example.myapplication.Activity;
 
 import static com.example.myapplication.Dao.DaoPType.GetList;
 import static com.example.myapplication.Dao.DaoPType.GetListUp;
+import static com.example.myapplication.Utils.FileUtils.CopyFile;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.APP;
 import com.example.myapplication.Adapter.GetStockAdapter;
-import com.example.myapplication.Entity.PType;
+import com.example.myapplication.Entity.GetStockReport.PType;
 import com.example.myapplication.R;
 import com.example.myapplication.Utils.FileUtils;
 
@@ -46,12 +47,13 @@ public class GetStockActivity extends AppCompatActivity {
         文件处理 copyStreamtoFile
          */
         File  appdatadb =new File(getCacheDir().getAbsolutePath()+"db");
-        if (!appdatadb.exists()) { // 判断是否存在，不存在则从安装目录中复制
-            InputStream inStream = APP.getInstance().getResources().openRawResource(R.raw.tmp);
-            FileUtils.copyStreamtoFile(inStream, appdatadb.toString());
-        }
-        //APPDATA设置DB路径
-        AppDataDBHelper.InitDBNAME(appdatadb.getAbsolutePath());
+        CopyFile(appdatadb);
+//        if (!appdatadb.exists()) { // 判断是否存在，不存在则从安装目录中复制
+//            InputStream inStream = APP.getInstance().getResources().openRawResource(R.raw.tmp);
+//            FileUtils.copyStreamtoFile(inStream, appdatadb.toString());
+//        }
+//        //APPDATA设置DB路径
+//        AppDataDBHelper.InitDBNAME(appdatadb.getAbsolutePath());
         mPTypeList.addAll(GetList("00000"));
         myAdapter = new GetStockAdapter(context,mPTypeList);
         mRecyclerView.setAdapter(myAdapter);

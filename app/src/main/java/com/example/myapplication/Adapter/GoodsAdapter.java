@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.Entity.BodyList;
-import com.example.myapplication.Entity.GetStockRequest;
+import com.example.myapplication.Entity.GetStockReport.BodyList;
+import com.example.myapplication.Entity.GetStockReport.GetStockRequest;
 import com.example.myapplication.R;
 import com.example.myapplication.Service.Webservice;
 import com.example.myapplication.Utils.GsonUtils;

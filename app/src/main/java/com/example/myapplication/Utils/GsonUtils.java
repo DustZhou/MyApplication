@@ -1,8 +1,7 @@
 package com.example.myapplication.Utils;
 
-import com.example.myapplication.Entity.BodyList;
-import com.example.myapplication.Entity.GetStockResp;
-import com.example.myapplication.Entity.Root;
+import com.example.myapplication.Entity.GetStockReport.BodyList;
+import com.example.myapplication.Entity.GetStockReport.GetStockResp;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

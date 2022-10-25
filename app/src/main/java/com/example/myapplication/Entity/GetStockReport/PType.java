@@ -1,4 +1,4 @@
-package com.example.myapplication.Entity;
+package com.example.myapplication.Entity.GetStockReport;
 
 public class PType {
     private String TypeID;

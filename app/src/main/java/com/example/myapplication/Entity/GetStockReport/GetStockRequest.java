@@ -1,6 +1,8 @@
-package com.example.myapplication.Entity;
+package com.example.myapplication.Entity.GetStockReport;
 
-public class GetStockRequest extends BaseRequest{
+import com.example.myapplication.Entity.BaseRequest;
+
+public class GetStockRequest extends BaseRequest {
     public String ClassLinear = "0";
     public String Condition = "";
     public String CountNub = "1";

@@ -1,11 +1,14 @@
 package com.example.myapplication.Adapter;
 
+import android.widget.Switch;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentA;
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentB;
+import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentC;
 
 /**
  * Created by YoKeyword on 16/6/5.
@@ -20,11 +23,17 @@ public class GoodsFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return FragmentA.newInstance();
-        } else {
-            return FragmentB.newInstance(mTitles[position]);
+        switch (position){
+            case 0:
+                return FragmentA.newInstance();
+            case 1:
+                return FragmentB.newInstance();
+            case 2:
+                return FragmentC.newInstance();
+            default:
+                break;
         }
+        return null;
     }
 
     @Override

@@ -14,10 +14,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.Activity.GetStockActivity;
-import com.example.myapplication.Activity.GoodsActivity;
-import com.example.myapplication.Activity.QueryActivity;
-import com.example.myapplication.Entity.PType;
+import com.example.myapplication.Entity.GetStockReport.PType;
 import com.example.myapplication.R;
 
 import java.util.List;
@@ -67,6 +64,7 @@ public class GetStockAdapter extends RecyclerView.Adapter<GetStockViewHoder> {
     public int getItemCount() {
         return mPTypeList.size();
     }
+
 }
 
 

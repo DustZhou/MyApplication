@@ -1,4 +1,4 @@
-package com.example.myapplication.Entity;
+package com.example.myapplication.Entity.GetStockReport;
 
 import java.util.List;
 

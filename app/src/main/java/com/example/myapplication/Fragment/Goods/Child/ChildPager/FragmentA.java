@@ -13,9 +13,7 @@ import me.yokeyword.fragmentation.SupportFragment;
 
 public class FragmentA extends SupportFragment {
     public static FragmentA newInstance() {
-
         Bundle args = new Bundle();
-
         FragmentA fragment = new FragmentA();
         fragment.setArguments(args);
         return fragment;

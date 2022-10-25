@@ -1,6 +1,7 @@
 package com.example.myapplication.Dao;
 
-import com.example.myapplication.Entity.PType;
+import com.example.myapplication.Entity.AddPTypeInfo.PriceType;
+import com.example.myapplication.Entity.GetStockReport.PType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +45,18 @@ public class DaoPType {
 
         return mPTypeList;
     }
-//    public static List<Root> GetRoot(String str){
-//        List<Root> mRoot = new ArrayList<>();
-//
-//
-//
-//    }
 
+    public static List<PriceType> GetPriceType(){
+        List<PriceType> mPriceType = new ArrayList<>();
+        List<HashMap> res = AppDataDBHelper.getInstance().queryListMap("SELECT * FROM PriceType WHERE  isDiscount='0'");
+        for (int i = 0; i < res.size(); i++) {
+            PriceType priceType = new PriceType((String)res.get(i).get("PriceTypeID"),
+                    (String)res.get(i).get("PriceType"),
+                    (String)res.get(i).get("PriceName"),
+                    (String)res.get(i).get("SaleOrBuy"),
+                    (String)res.get(i).get("FullName"));
+            mPriceType.add(priceType);
+        }
+        return mPriceType;
+    }
 }

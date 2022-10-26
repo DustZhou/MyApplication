@@ -1,6 +1,7 @@
 package com.example.myapplication.Dao;
 
 import com.example.myapplication.Entity.AddPTypeInfo.PriceType;
+import com.example.myapplication.Entity.AddPTypeInfo.UnitList;
 import com.example.myapplication.Entity.GetStockReport.PType;
 
 import java.util.ArrayList;
@@ -59,4 +60,15 @@ public class DaoPType {
         }
         return mPriceType;
     }
+
+    public static List<UnitList> GetUnitList() {
+        List<UnitList> mUnitList = new ArrayList<>();
+        List<HashMap> res = AppDataDBHelper.getInstance().queryListMap("SELECT * FROM Unit WHERE  tag='0'");
+        for (int i = 0; i < res.size(); i++) {
+            UnitList unitList = new UnitList((String)res.get(i).get("UnitID"), (String) res.get(i).get("UnitName"));
+            mUnitList.add(unitList);
+        }
+        return mUnitList;
+    }
+
 }

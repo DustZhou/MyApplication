@@ -53,6 +53,7 @@ public class GetStockAdapter extends RecyclerView.Adapter<GetStockViewHoder> {
                     Intent intent = new Intent();
                     intent.putExtra("GoodsName", type.getFullName());
                     intent.putExtra("GoodsPTyeID", type.getTypeID());
+                    intent.putExtra("GoodsParID",type.getParID());
                     ((Activity) context).setResult(Activity.RESULT_OK, intent);
                     ((Activity) context).finish();
                 }

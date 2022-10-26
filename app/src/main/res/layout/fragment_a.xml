@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,8 +12,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,8 +44,8 @@
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goods"
@@ -59,7 +59,7 @@
             android:text="类    别:"
             tools:ignore="MissingConstraints" />
 
-        <EditText
+        <TextView
             android:id="@+id/name_category"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -76,8 +76,8 @@
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/category"
@@ -108,8 +108,8 @@
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vendor"
@@ -131,7 +131,7 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="编号"/>
+            android:hint="编号" />
     </LinearLayout>
 
     <LinearLayout
@@ -140,8 +140,8 @@
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numbering"
@@ -173,15 +173,15 @@
                 android:background="@color/white"
                 android:clickable="true"
                 android:gravity="center_vertical"
-                android:hint="规格"/>
+                android:hint="规格" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/specification2"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vendor"
@@ -202,7 +202,7 @@
                 android:background="@color/white"
                 android:clickable="true"
                 android:gravity="center_vertical"
-                android:hint="型号"/>
+                android:hint="型号" />
         </LinearLayout>
     </LinearLayout>
 
@@ -212,8 +212,8 @@
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/specification"
@@ -235,7 +235,7 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="条码"/>
+            android:hint="条码" />
     </LinearLayout>
 
     <LinearLayout
@@ -279,7 +279,7 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="产地"/>
+            android:hint="产地" />
     </LinearLayout>
 
     <LinearLayout
@@ -323,7 +323,7 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="换算率2"/>
+            android:hint="换算率2" />
     </LinearLayout>
 
     <LinearLayout
@@ -367,7 +367,7 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="换算率3"/>
+            android:hint="换算率3" />
     </LinearLayout>
 
     <LinearLayout
@@ -398,12 +398,27 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="备注"/>
+            android:hint="备注" />
     </LinearLayout>
+
     <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/but_push"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit3"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/but_push"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginStart="20dp"
+        android:text="提交"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

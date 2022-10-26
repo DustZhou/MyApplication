@@ -1,5 +1,7 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
 
+import com.example.myapplication.Entity.AddPTypeInfo.PriceData;
+
 import java.util.List;
 
 public class UnitList {
@@ -16,6 +18,22 @@ public class UnitList {
     private String UnitNum;
 
     private String UnitRate;
+
+    public UnitList(List<String> BarCodeData, String BaseUnit, List<PriceData> PriceData,
+                    String UnitID, String UnitName, String UnitNum, String UnitRate) {
+        this.BarCodeData = BarCodeData;
+        this.BaseUnit = BaseUnit;
+        this.PriceData = PriceData;
+        this.UnitID = UnitID;
+        this.UnitName = UnitName;
+        this.UnitNum = UnitNum;
+        this.UnitRate = UnitRate;
+    }
+
+    public UnitList(String UnitID, String UnitName) {
+        this.UnitID  = UnitID;
+        this.UnitName = UnitName;
+    }
 
     public void setBarCodeData(List<String> BarCodeData) {
         this.BarCodeData = BarCodeData;
@@ -71,5 +89,18 @@ public class UnitList {
 
     public String getUnitRate() {
         return this.UnitRate;
+    }
+
+    @Override
+    public String toString() {
+        return "UnitList{" +
+                "BarCodeData=" + BarCodeData +
+                ", BaseUnit='" + BaseUnit + '\'' +
+                ", PriceData=" + PriceData +
+                ", UnitID='" + UnitID + '\'' +
+                ", UnitName='" + UnitName + '\'' +
+                ", UnitNum='" + UnitNum + '\'' +
+                ", UnitRate='" + UnitRate + '\'' +
+                '}';
     }
 }

@@ -1,8 +1,10 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
 
+import com.example.myapplication.Entity.BaseRequest;
+
 import java.util.List;
 
-public class Root {
+public class Root extends BaseRequest{
     private String Area;
 
     private String BTypeID;
@@ -13,21 +15,11 @@ public class Root {
 
     private String BrandTypeID;
 
-    private String CodeWord;
-
     private String Comment;
-
-    private String ConnectionKey;
-
-    private String DbName;
-
-    private String EditionName;
 
     private String FullName;
 
     private List<String> ImageList;
-
-    private String LoginID;
 
     private String NamePy;
 
@@ -46,6 +38,30 @@ public class Root {
     private String UserCode;
 
     private String UserID;
+
+    public Root(String area, String BTypeID, List<String> barCodeList, String billID, String brandTypeID, String comment, String fullName, List<String> imageList, String namePy, int PTypeRecID, String parID, String rowIndex, String standard, String type, List<UnitList> unitList, String userCode, String userID) {
+        Area = area;
+        this.BTypeID = BTypeID;
+        BarCodeList = barCodeList;
+        BillID = billID;
+        BrandTypeID = brandTypeID;
+        Comment = comment;
+        FullName = fullName;
+        ImageList = imageList;
+        NamePy = namePy;
+        this.PTypeRecID = PTypeRecID;
+        ParID = parID;
+        RowIndex = rowIndex;
+        Standard = standard;
+        Type = type;
+        UnitList = unitList;
+        UserCode = userCode;
+        UserID = userID;
+    }
+
+    public Root() {
+
+    }
 
     public void setArea(String Area) {
         this.Area = Area;
@@ -221,5 +237,28 @@ public class Root {
 
     public String getUserID() {
         return this.UserID;
+    }
+
+    @Override
+    public String toString() {
+        return "Root{" +
+                "Area='" + Area + '\'' +
+                ", BTypeID='" + BTypeID + '\'' +
+                ", BarCodeList=" + BarCodeList +
+                ", BillID='" + BillID + '\'' +
+                ", BrandTypeID='" + BrandTypeID + '\'' +
+                ", Comment='" + Comment + '\'' +
+                ", FullName='" + FullName + '\'' +
+                ", ImageList=" + ImageList +
+                ", NamePy='" + NamePy + '\'' +
+                ", PTypeRecID=" + PTypeRecID +
+                ", ParID='" + ParID + '\'' +
+                ", RowIndex='" + RowIndex + '\'' +
+                ", Standard='" + Standard + '\'' +
+                ", Type='" + Type + '\'' +
+                ", UnitList=" + UnitList +
+                ", UserCode='" + UserCode + '\'' +
+                ", UserID='" + UserID + '\'' +
+                '}';
     }
 }

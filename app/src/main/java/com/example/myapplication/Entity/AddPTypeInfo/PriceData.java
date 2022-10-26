@@ -1,9 +1,20 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
 
+import androidx.lifecycle.ViewModel;
+
 public class PriceData {
     private String PriceType;
 
     private String PriceValue;
+
+    public PriceData() {
+
+    }
+
+    public PriceData(String priceType, String priceValue) {
+        PriceType = priceType;
+        PriceValue = priceValue;
+    }
 
     public void setPriceType(String PriceType) {
         this.PriceType = PriceType;
@@ -19,5 +30,13 @@ public class PriceData {
 
     public String getPriceValue() {
         return this.PriceValue;
+    }
+
+    @Override
+    public String toString() {
+        return "PriceData{" +
+                "PriceType='" + PriceType + '\'' +
+                ", PriceValue='" + PriceValue + '\'' +
+                '}';
     }
 }

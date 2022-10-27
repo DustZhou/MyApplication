@@ -35,7 +35,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="商品" />
+            android:hint="商品"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -67,7 +68,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="全部商品" />
+            android:hint="全部商品"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -99,7 +101,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="供应商" />
+            android:hint="供应商"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -131,7 +134,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="编号" />
+            android:hint="编号"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -173,7 +177,8 @@
                 android:background="@color/white"
                 android:clickable="true"
                 android:gravity="center_vertical"
-                android:hint="规格" />
+                android:hint="规格"
+                android:textSize="16sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -202,7 +207,8 @@
                 android:background="@color/white"
                 android:clickable="true"
                 android:gravity="center_vertical"
-                android:hint="型号" />
+                android:hint="型号"
+                android:textSize="16sp"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -235,7 +241,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="条码" />
+            android:hint="条码"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -263,7 +270,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
-            android:entries="@array/unitSpinner" />
+            android:spinnerMode="dialog" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -279,7 +286,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="产地" />
+            android:hint="产地"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -307,7 +315,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
-            android:entries="@array/unitSpinner" />
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -323,7 +337,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="换算率2" />
+            android:hint="换算率2"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -351,8 +366,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
-            android:entries="@array/unitSpinner" />
-
+            android:spinnerMode="dialog"/>
+        <Button
+            android:id="@+id/btn_clear2"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -367,7 +386,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="换算率3" />
+            android:hint="换算率3"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -398,7 +418,8 @@
             android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:hint="备注" />
+            android:hint="备注"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <ImageView

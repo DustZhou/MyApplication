@@ -22,18 +22,20 @@
             android:text="单    位"
             tools:ignore="MissingConstraints" />
 
-        <Spinner
+        <TextView
             android:id="@+id/name_unit"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_marginStart="10dp"
-            android:spinnerMode="dialog"/>
+            android:spinnerMode="dialog" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:clipChildren="false"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"

@@ -22,17 +22,19 @@ import com.example.myapplication.Activity.GetStockActivity;
 import com.example.myapplication.Adapter.SpinnerAdapter;
 import com.example.myapplication.Entity.AddPTypeInfo.Units;
 import com.example.myapplication.R;
-import com.example.myapplication.ViewModel.AddGoodsModel;
 
+import com.example.myapplication.Utils.DiySpinner;
+import com.example.myapplication.ViewModel.AddGoodsModel;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
 public class FragmentA extends SupportFragment {
     private AddGoodsModel model;
+    private DiySpinner diySpinner = new DiySpinner();
     private Button button;
-    private Spinner Units;
-    private Spinner Units1;
-    private Spinner Units2;
+    private TextView Units;
+    private TextView Units1;
+    private TextView Units2;
     private String GoodsParID;
     private String GoodsName;
     EditText FullName;
@@ -54,9 +56,9 @@ public class FragmentA extends SupportFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a, container, false);
         button = (Button) view.findViewById(R.id.but_push);
-        Units = (Spinner) view.findViewById(R.id.name_unit);
-        Units1 = (Spinner) view.findViewById(R.id.name_unit1);
-        Units2 = (Spinner) view.findViewById(R.id.name_unit2);
+        Units = (TextView) view.findViewById(R.id.name_unit);
+        Units1 = (TextView) view.findViewById(R.id.name_unit1);
+        Units2 = (TextView) view.findViewById(R.id.name_unit2);
         FullName = (EditText) view.findViewById(R.id.goods_name);
         Standard = (EditText) view.findViewById(R.id.name_specification1);
         Type = (EditText) view.findViewById(R.id.name_specification2);
@@ -70,50 +72,65 @@ public class FragmentA extends SupportFragment {
     private void initView(View view) {
         model = new ViewModelProvider(requireActivity()).get(AddGoodsModel.class);
         model.SpinnerList.addAll(GetUnits());
-        Units.setAdapter(new SpinnerAdapter(_mActivity, model.SpinnerList));
-        Units1.setAdapter(new SpinnerAdapter(_mActivity, model.SpinnerList));
-        Units2.setAdapter(new SpinnerAdapter(_mActivity, model.SpinnerList));
-        Units.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-//                Toast.makeText(getActivity(), adapterView.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
-                model.UnitsMap.put("UnitID1", (Units)adapterView.getItemAtPosition(position));
-                findFragment(FragmentB.class).iniUntil();
-            }
+        diySpinner.DiySpinner("UnitID1", this, Units, getActivity(), model);
+        diySpinner.DiySpinner("UnitID2", this, Units1, getActivity(), model);
+        diySpinner.DiySpinner("UnitID3", this, Units2, getActivity(), model);
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-        Units1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-//                Toast.makeText(getActivity(), adapterView.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
-                model.UnitsMap.put("UnitID2", (Units)adapterView.getItemAtPosition(position));
-                findFragment(FragmentB.class).iniUntil();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-        Units2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-//                Toast.makeText(getActivity(), adapterView.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
-                model.UnitsMap.put("UnitID3",(Units)adapterView.getItemAtPosition(position));
-                findFragment(FragmentB.class).iniUntil();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+//        Units.setAdapter(new SpinnerAdapter(_mActivity, model.SpinnerList));
+//        Units1.setAdapter(new SpinnerAdapter(_mActivity, model.SpinnerList));
+//        Units2.setAdapter(new SpinnerAdapter(_mActivity, model.SpinnerList));
 
 
+//        Units.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+//                model.UnitsMap.put("UnitID1", (Units) adapterView.getItemAtPosition(position));
+//                findFragment(FragmentB.class).iniUntil();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+
+
+//        Units.setContent((ArrayList<Units>) model.SpinnerList);
+//        Units.setOnItemSelectedListener(new SimpleSpinner.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id, String content) {
+//                model.UnitsMap.put("UnitID1", (Units)adapterView.getItemAtPosition(position));
+//                findFragment(FragmentB.class).iniUntil();
+//            }
+//        });
+
+
+//        Units1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+////                Toast.makeText(getActivity(), adapterView.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
+//                model.UnitsMap.put("UnitID2", (Units) adapterView.getItemAtPosition(position));
+//                findFragment(FragmentB.class).iniUntil();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+//        Units2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+//                model.UnitsMap.put("UnitID3", (Units) adapterView.getItemAtPosition(position));
+//                findFragment(FragmentB.class).iniUntil();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
 
         NameCategory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,5 +171,41 @@ public class FragmentA extends SupportFragment {
         }
 
     }
+//    public void setUserPosition(String userPosition) {
+//        int selectIndex=-1;
+//        for (int i=0;i<userPositionArray.length;i++){
+//            if (userPositionArray[i].equals(userPosition)){
+//                selectIndex=i;
+//                break;
+//            }
+//        }
+//        if (selectIndex<0) {
+//            //如果没有找到对应的值，则显示为空白
+//            spinnerUserPosition.getChildAt(0).setVisibility(View.INVISIBLE);
+//        } else {
+//            //如果找到对应的值，则显示子元素
+//            spinnerUserPosition.getChildAt(0).setVisibility(View.VISIBLE);
+//            spinnerUserPosition.setSelection(selectIndex);
+//        }
+//    }
+
+
+//public void spinnerDefaultValue(String value) {
+//    int selectIndex=-1;
+//    for (int i=0;i<arr.size();i++){
+//        if (arr.get(i).equals(value)){
+//            selectIndex=i;
+//            break;
+//        }
+//    }
+//    if (selectIndex<0) {
+//        //若是没有找到对应的值，则显示为空白
+//        spinner.getChildAt(0).setVisibility(View.INVISIBLE);
+//    } else {
+//        //若是找到对应的值，则显示子元素
+//        spinner.getChildAt(0).setVisibility(View.VISIBLE);
+//        spinner.setSelection(selectIndex);
+//    }
+//}
 }
 

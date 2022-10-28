@@ -18,6 +18,8 @@ public class AddGoodsModel extends ViewModel {
     public Root root = new Root();
     //价格
     public HashMap<String,HashMap<String,String>> mUnitListPriceMap = new HashMap<String,HashMap<String,String>>();
+    public String str;
+    public List<String> stringList = new ArrayList<>();
     //单位
     public HashMap<String,Units> UnitsMap = new HashMap<String,Units>();
     /*

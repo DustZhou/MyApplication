@@ -43,6 +43,7 @@ public class FragBAdapter extends RecyclerView.Adapter<FragBAdapter.RecyclerHold
     public void onBindViewHolder(@NonNull RecyclerHolder holder, @SuppressLint("RecyclerView") int position) {
         PriceType priceType = mPriceType.get(position);
         holder.textView.setText(priceType.getFullName());
+
         holder.inputprice.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -69,8 +70,14 @@ public class FragBAdapter extends RecyclerView.Adapter<FragBAdapter.RecyclerHold
                 Log.e("输入结束执行该方法", "输入结束");
             }
         });
-        holder.inputprice.setText(model.mUnitListPriceMap.get(str).get(mPriceType.get(position).getPriceType()));
-//
+        if (model.mUnitListPriceMap != null) {
+            if (model.mUnitListPriceMap.get(str).get(mPriceType.get(position).getPriceType()) != null) {
+                holder.inputprice.setText(model.mUnitListPriceMap.get(str).get(mPriceType.get(position).getPriceType()));
+            }else {
+
+            }
+        }
+
     }
 
 

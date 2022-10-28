@@ -265,11 +265,13 @@
             android:text="单 位:"
             tools:ignore="MissingConstraints" />
 
-        <Spinner
+        <TextView
             android:id="@+id/name_unit"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_marginStart="10dp"
+            android:background="@color/white"
             android:spinnerMode="dialog" />
 
         <TextView
@@ -310,10 +312,11 @@
             android:text="单 位:"
             tools:ignore="MissingConstraints" />
 
-        <Spinner
+        <TextView
             android:id="@+id/name_unit1"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:spinnerMode="dialog" />
 
@@ -361,10 +364,11 @@
             android:text="单 位:"
             tools:ignore="MissingConstraints" />
 
-        <Spinner
+        <TextView
             android:id="@+id/name_unit2"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:spinnerMode="dialog"/>
         <Button

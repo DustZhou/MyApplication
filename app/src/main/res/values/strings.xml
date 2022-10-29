@@ -3,4 +3,7 @@
     <string name="recommend">商品信息</string>
     <string name="hot">商品价格</string>
     <string name="favorite">单位条码</string>
+    <string name="more">单位条码</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

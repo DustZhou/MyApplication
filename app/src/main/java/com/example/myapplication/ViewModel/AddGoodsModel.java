@@ -38,6 +38,7 @@ public class AddGoodsModel extends ViewModel {
 
 
 
+
     public List<UnitList> UnitLists = new ArrayList<>();
     public List<PriceData> PriceDatas = new ArrayList<>();
 

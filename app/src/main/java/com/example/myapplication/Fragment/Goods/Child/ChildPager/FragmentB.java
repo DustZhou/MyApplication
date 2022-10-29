@@ -64,8 +64,7 @@ public class FragmentB extends SupportFragment {
         initView(view);
         return view;
     }
-
-    //    String str;
+//    String str;
 //    List<String> stringList;
     @SuppressLint("NotifyDataSetChanged")
     public void iniUntil() {
@@ -91,20 +90,6 @@ public class FragmentB extends SupportFragment {
          * B面单位的选择影响B面的价格加载
          */
         diySpinner.DiySpinner1(valueList, this, mUnits, getActivity(), model);//加载商品价格界面的单位
-//        mUnits.setAdapter(new SpinnerAdapter(_mActivity, valueList));
-//        mUnits.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//                str = stringList.get(i);
-//                mAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> adapterView) {
-//
-//            }
-//        });
         mAdapter = new FragBAdapter(mPriceType, model, model.stringList.contains(model.str) ? model.str ://加载商品下面的详细各级价格
                 (model.stringList.size() == 0 ? "" : model.stringList.get(0)));
         LinearLayoutManager layoutManager = new LinearLayoutManager(_mActivity);

@@ -371,9 +371,10 @@
             android:gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:spinnerMode="dialog"/>
+
         <Button
-            android:id="@+id/btn_clear2"
-            android:layout_width="30dp"
+            android:id="@+id/btn_clear1"
+            android:layout_width="33dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp" />
         <TextView

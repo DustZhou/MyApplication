@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.myapplication.Adapter.FragBAdapter;
 import com.example.myapplication.Adapter.SpinnerAdapter;
 import com.example.myapplication.Entity.AddPTypeInfo.Units;
+import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentA;
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentB;
 import com.example.myapplication.ViewModel.AddGoodsModel;
 

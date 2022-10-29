@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentA;
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentB;
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentC;
+import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentD;
 
 /**
  *
@@ -36,6 +37,8 @@ public class GoodsFragmentAdapter extends FragmentPagerAdapter {
                 return FragmentB.newInstance();
             case 2:
                 return FragmentC.newInstance();
+            case 3:
+                return FragmentD.newInstance();
             default:
                 break;
         }

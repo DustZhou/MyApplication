@@ -8,6 +8,14 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+/**
+ *
+ * @ProjectName: GetStockViewHoder
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class GetStockViewHoder extends RecyclerView.ViewHolder {
     TextView mTitleTv;

@@ -9,6 +9,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import db.AppDataDBHelper;
+/**
+ *
+ * @ProjectName: DaoPType
+ * @Package: com.example.myapplication.Dao
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class DaoPType {
 

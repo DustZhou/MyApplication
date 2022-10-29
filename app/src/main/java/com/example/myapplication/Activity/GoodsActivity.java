@@ -24,6 +24,14 @@ import com.example.myapplication.Utils.GsonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ *
+ * @ProjectName: GoodsActivity
+ * @Package: com.example.myapplication.Activity
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class GoodsActivity extends AppCompatActivity {
     //网络请求的地址Url 和 接口名字

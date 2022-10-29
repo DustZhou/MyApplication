@@ -1,4 +1,12 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
+/**
+ *
+ * @ProjectName: PriceType
+ * @Package: com.example.myapplication.Entity.AddPTypeInfo
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class PriceType {
     private String PriceTypeID;

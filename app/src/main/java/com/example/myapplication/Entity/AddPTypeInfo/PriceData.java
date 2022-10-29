@@ -1,6 +1,14 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
 
 import androidx.lifecycle.ViewModel;
+/**
+ *
+ * @ProjectName: PriceData
+ * @Package: com.example.myapplication.Entity.AddPTypeInfo
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class PriceData {
     private String PriceType;

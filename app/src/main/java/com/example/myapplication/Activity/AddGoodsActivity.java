@@ -11,6 +11,14 @@ import java.io.File;
 
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.SupportFragment;
+/**
+ *
+ * @ProjectName: AddGoodsActivity
+ * @Package: com.example.myapplication.Activity
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class AddGoodsActivity extends SupportActivity {
     private SupportFragment mFragment = new SupportFragment();

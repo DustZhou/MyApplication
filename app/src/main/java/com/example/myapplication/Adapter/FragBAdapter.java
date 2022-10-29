@@ -19,6 +19,14 @@ import com.example.myapplication.ViewModel.AddGoodsModel;
 
 import java.util.HashMap;
 import java.util.List;
+/**
+ *
+ * @ProjectName: FragBAdapter
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class FragBAdapter extends RecyclerView.Adapter<FragBAdapter.RecyclerHolder> {
     private List<PriceType> mPriceType;
@@ -48,32 +56,28 @@ public class FragBAdapter extends RecyclerView.Adapter<FragBAdapter.RecyclerHold
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 // 输入的内容变化的监听
-                Log.e("输入过程中执行该方法", "文字变化");
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 // 输入前的监听
-                Log.e("输入前确认执行该方法", "开始输入");
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
                 HashMap<String, String> c = new HashMap<String, String>();
                 if (model.mUnitListPriceMap.get(str) != null) {
-
                     c.putAll(model.mUnitListPriceMap.get(str));
                 }
                 c.put(mPriceType.get(position).getPriceType(), holder.inputprice.getText().toString());
                 model.mUnitListPriceMap.put(str, c);
                 // 输入后的监听
-                Log.e("输入结束执行该方法", "输入结束");
             }
         });
-        if (model.mUnitListPriceMap != null) {
+        if (model.mUnitListPriceMap.get(str) != null) {
             if (model.mUnitListPriceMap.get(str).get(mPriceType.get(position).getPriceType()) != null) {
                 holder.inputprice.setText(model.mUnitListPriceMap.get(str).get(mPriceType.get(position).getPriceType()));
-            }else {
+            } else {
 
             }
         }

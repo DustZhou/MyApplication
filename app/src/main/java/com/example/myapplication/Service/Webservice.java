@@ -14,6 +14,14 @@ import java.util.List;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
+/**
+ *
+ * @ProjectName: Webservice
+ * @Package: com.example.myapplication.Service
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 /**
  * Webservice访问类

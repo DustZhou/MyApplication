@@ -1,5 +1,13 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
 import java.util.List;
+/**
+ *
+ * @ProjectName: UnitList
+ * @Package: com.example.myapplication.Entity.AddPTypeInfo
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class UnitList {
     private List<String> BarCodeData;

@@ -6,6 +6,14 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ *
+ * @ProjectName: GsonUtils
+ * @Package: com.example.myapplication.Utils
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class GsonUtils {
     public static List GetStockList(String str) {

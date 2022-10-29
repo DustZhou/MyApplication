@@ -11,6 +11,14 @@ import androidx.annotation.Nullable;
 import com.example.myapplication.Base.BaseMainFragment;
 import com.example.myapplication.Fragment.Goods.Child.ViewPagerFragment;
 import com.example.myapplication.R;
+/**
+ *
+ * @ProjectName: GoodsFragment
+ * @Package: com.example.myapplication.Fragment.Goods
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class GoodsFragment extends BaseMainFragment {
     public static GoodsFragment newInstance(){

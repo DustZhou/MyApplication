@@ -21,9 +21,14 @@ import com.example.myapplication.Utils.GsonUtils;
 import java.util.List;
 
 /**
- * GoodsAdapter
- * 对recycleview处理
+ *
+ * @ProjectName: GoodsAdapter
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
  */
+
 public class GoodsAdapter extends RecyclerView.Adapter<GoodsViewHoder> {
     //网络请求的地址Url 和 接口名字
     private String URL = "http://ys.wltrj.com:80/wlt/AndroidWebSevice.asmx";

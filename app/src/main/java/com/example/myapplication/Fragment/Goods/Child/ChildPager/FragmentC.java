@@ -11,6 +11,14 @@ import androidx.annotation.Nullable;
 import com.example.myapplication.R;
 
 import me.yokeyword.fragmentation.SupportFragment;
+/**
+ *
+ * @ProjectName: FragmentC
+ * @Package: com.example.myapplication.Fragment.Goods.Child.ChildPager
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class FragmentC extends SupportFragment {
 

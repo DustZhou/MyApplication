@@ -8,6 +8,14 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import db.AppDataDBHelper;
+/**
+ *
+ * @ProjectName: FileUtils
+ * @Package: com.example.myapplication.Utils
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class FileUtils {
     /**

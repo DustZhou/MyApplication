@@ -12,7 +12,14 @@ import com.example.myapplication.Entity.AddPTypeInfo.Units;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * @ProjectName: SimpleSpinner
+ * @Package: com.example.myapplication.Utils
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 /**
  * @function:封装下拉选框
  */

@@ -19,6 +19,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
+/**
+ *
+ * @ProjectName: DiySpinner
+ * @Package: com.example.myapplication.Utils
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class DiySpinner {
     public SupportFragment fragment;
@@ -27,7 +35,6 @@ public class DiySpinner {
     private String key;
     public TextView TextTv;
     public Context context;
-    private List<String> stringList;
     @SuppressLint("NotConstructor")
     public void DiySpinner(String key, SupportFragment fragment,TextView TextTv, Context context,AddGoodsModel model){
         this.context = context;
@@ -60,10 +67,12 @@ public class DiySpinner {
 
 
     @SuppressLint("NotConstructor")
-    public void DiySpinner1(List<Units> list, TextView TextTv, Context context){
+    public void DiySpinner1(List<Units> list,SupportFragment fragment, TextView TextTv, Context context,AddGoodsModel model){
         this.context = context;
+        this.fragment = fragment;
         this.list = list;
         this.TextTv = TextTv;
+        this.model= model;
         ListPopupWindow popupWindow = new ListPopupWindow(context);
         popupWindow.setAdapter(new SpinnerAdapter(context,list));
         popupWindow.setAnchorView(TextTv);
@@ -74,7 +83,8 @@ public class DiySpinner {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextTv.setText(list.get(position).getFullName());
-                model.str =model.stringList.get(position);
+                model.str = model.stringList.get(position);
+                fragment.findFragment(FragmentB.class).WeiZhi();
                 popupWindow.dismiss();
             }
         });

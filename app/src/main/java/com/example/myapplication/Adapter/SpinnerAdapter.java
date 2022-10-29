@@ -13,6 +13,14 @@ import com.example.myapplication.Entity.AddPTypeInfo.Units;
 import com.example.myapplication.R;
 
 import java.util.List;
+/**
+ *
+ * @ProjectName: SpinnerAdapter
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class SpinnerAdapter extends BaseAdapter {
     private Context context;

@@ -10,9 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 
 /**
- * GoodsViewHoder
- * 设置item
+ *
+ * @ProjectName: GoodsViewHoder
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
  */
+
 public class GoodsViewHoder extends RecyclerView.ViewHolder {
     TextView mTitleTv;
     TextView mTitleTv2;

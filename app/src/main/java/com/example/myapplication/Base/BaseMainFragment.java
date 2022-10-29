@@ -8,6 +8,15 @@ import me.yokeyword.fragmentation.SupportFragment;
 
 
 /**
+ *
+ * @ProjectName: BaseMainFragment
+ * @Package: com.example.myapplication.Base
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
+
+/**
  * 懒加载
  * Created by YoKeyword on 16/6/5.
  */

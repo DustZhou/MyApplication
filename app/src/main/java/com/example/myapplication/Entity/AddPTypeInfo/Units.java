@@ -1,4 +1,12 @@
 package com.example.myapplication.Entity.AddPTypeInfo;
+/**
+ *
+ * @ProjectName: Units
+ * @Package: com.example.myapplication.Entity.AddPTypeInfo
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class Units {
     private String UnitID;

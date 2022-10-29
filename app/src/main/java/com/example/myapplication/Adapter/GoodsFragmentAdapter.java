@@ -11,8 +11,14 @@ import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentB;
 import com.example.myapplication.Fragment.Goods.Child.ChildPager.FragmentC;
 
 /**
- * Created by YoKeyword on 16/6/5.
+ *
+ * @ProjectName: GoodsFragmentAdapter
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
  */
+
 public class GoodsFragmentAdapter extends FragmentPagerAdapter {
     private String[] mTitles;
 

@@ -27,7 +27,14 @@ import com.example.myapplication.Utils.DiySpinner;
 import com.example.myapplication.ViewModel.AddGoodsModel;
 
 import me.yokeyword.fragmentation.SupportFragment;
-
+/**
+ *
+ * @ProjectName: FragmentA
+ * @Package: com.example.myapplication.Fragment.Goods.Child.ChildPager
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 public class FragmentA extends SupportFragment {
     private AddGoodsModel model;
     private DiySpinner diySpinner = new DiySpinner();

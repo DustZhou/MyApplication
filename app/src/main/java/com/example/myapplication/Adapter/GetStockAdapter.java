@@ -18,6 +18,14 @@ import com.example.myapplication.Entity.GetStockReport.PType;
 import com.example.myapplication.R;
 
 import java.util.List;
+/**
+ *
+ * @ProjectName: GetStockAdapter
+ * @Package: com.example.myapplication.Adapter
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class GetStockAdapter extends RecyclerView.Adapter<GetStockViewHoder> {
     private Context context;

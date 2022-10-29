@@ -14,6 +14,14 @@ import com.example.myapplication.R;
 import com.google.android.material.tabs.TabLayout;
 
 import me.yokeyword.fragmentation.SupportFragment;
+/**
+ *
+ * @ProjectName: ViewPagerFragment
+ * @Package: com.example.myapplication.Fragment.Goods.Child
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class ViewPagerFragment extends SupportFragment {
     private TabLayout mTab;

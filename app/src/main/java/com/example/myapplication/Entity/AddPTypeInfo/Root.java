@@ -3,6 +3,14 @@ package com.example.myapplication.Entity.AddPTypeInfo;
 import com.example.myapplication.Entity.BaseRequest;
 
 import java.util.List;
+/**
+ *
+ * @ProjectName: Root
+ * @Package: com.example.myapplication.Entity.AddPTypeInfo
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class Root extends BaseRequest{
     private String Area;

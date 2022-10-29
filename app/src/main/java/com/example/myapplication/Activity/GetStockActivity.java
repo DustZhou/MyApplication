@@ -28,6 +28,14 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+/**
+ *
+ * @ProjectName: GetStockActivity
+ * @Package: com.example.myapplication.Activity
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class GetStockActivity extends AppCompatActivity {
     private Button butUponelevel;

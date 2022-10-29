@@ -25,6 +25,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
+/**
+ *
+ * @ProjectName: FragmentB
+ * @Package: com.example.myapplication.Fragment.Goods.Child.ChildPager
+ * @Description: java类作用描述
+ * @Author: ZHT
+ * @CreateDate: 2022/10/29
+ */
 
 public class FragmentB extends SupportFragment {
     private static final String ARG_TYPE = "arg_type";
@@ -57,8 +65,8 @@ public class FragmentB extends SupportFragment {
         return view;
     }
 
-    String str;
-
+    //    String str;
+//    List<String> stringList;
     @SuppressLint("NotifyDataSetChanged")
     public void iniUntil() {
         model.stringList = new ArrayList<>();
@@ -75,10 +83,14 @@ public class FragmentB extends SupportFragment {
             model.stringList.add("UnitID3");
             valueList.add(model.UnitsMap.get("UnitID3"));
         }
-        if (model.stringList.size()>0){
+        if (model.stringList.size() > 0) {
             mUnits.setText(valueList.get(0).getFullName());
         }
-        diySpinner.DiySpinner1(valueList, mUnits, getActivity());
+        /**
+         * A面的单位选择影响B面的单位
+         * B面单位的选择影响B面的价格加载
+         */
+        diySpinner.DiySpinner1(valueList, this, mUnits, getActivity(), model);//加载商品价格界面的单位
 //        mUnits.setAdapter(new SpinnerAdapter(_mActivity, valueList));
 //        mUnits.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 //            @Override
@@ -93,7 +105,8 @@ public class FragmentB extends SupportFragment {
 //
 //            }
 //        });
-        mAdapter = new FragBAdapter(mPriceType, model, model.stringList.contains(model.str) ? model.str : (model.stringList.size() == 0 ? "" : model.stringList.get(0)));
+        mAdapter = new FragBAdapter(mPriceType, model, model.stringList.contains(model.str) ? model.str ://加载商品下面的详细各级价格
+                (model.stringList.size() == 0 ? "" : model.stringList.get(0)));
         LinearLayoutManager layoutManager = new LinearLayoutManager(_mActivity);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -103,5 +116,13 @@ public class FragmentB extends SupportFragment {
         model = new ViewModelProvider(requireActivity()).get(AddGoodsModel.class);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         mPriceType = GetPriceType();
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    public void WeiZhi(){
+        mAdapter = new FragBAdapter(mPriceType, model, model.str);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(_mActivity);
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setLayoutManager(layoutManager);
+        mAdapter.notifyDataSetChanged();
     }
 }
